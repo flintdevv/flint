@@ -1,0 +1,70 @@
+{
+  "name": "@flintdev/stripe",
+  "version": "0.0.0",
+  "description": "Stripe webhook provider for Flint. Signature verification, event taxonomy, idempotency.",
+  "license": "MIT",
+  "author": "Ahmed Amin Jidar",
+  "homepage": "https://github.com/flintdevv/flint/tree/main/packages/stripe#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flintdevv/flint.git",
+    "directory": "packages/stripe"
+  },
+  "bugs": {
+    "url": "https://github.com/flintdevv/flint/issues"
+  },
+  "keywords": [
+    "webhooks",
+    "stripe",
+    "stripe-webhooks",
+    "signature-verification",
+    "typescript"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20.18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "dependencies": {
+    "@flintdev/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "stripe": ">=14"
+  },
+  "peerDependenciesMeta": {
+    "stripe": {
+      "optional": false
+    }
+  }
+}
