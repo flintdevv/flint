@@ -44,6 +44,9 @@ jobs:
       - name: Approve esbuild build script
         run: pnpm rebuild esbuild
 
+      - name: Lint
+        run: pnpm lint
+
       - name: Typecheck
         run: pnpm typecheck
 
