@@ -13,6 +13,7 @@ export {
 } from './errors.js';
 export type { ClaimResult, IdempotencyStore } from './ports/idempotency-store.js';
 export type { DeadLetterEntry, DeadLetterQueue } from './ports/dead-letter-queue.js';
+export type { WebhookProvider } from './ports/webhook-provider.js';
 export {
   createWebhookHandler,
   type FlintHandler,
